@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, SafeAreaView, Image } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, SafeAreaView, Image, ImageBackground, TouchableOpacity } from 'react-native';
+import ReactNativeParallaxHeader from 'react-native-parallax-header';
+
 
 
 export default function App() {
@@ -70,9 +72,14 @@ const omera = {
   height: 500
 };
 
+const backgroundImage = { 
+uri: 'http://getwallpapers.com/wallpaper/full/6/d/f/10101.jpg',
+width:600, 
+height:800
+}
+
  return(
     <SafeAreaView style={styles.cardLayout}>
-
       <View style={styles.header}>
         <Text style={styles.headerSam}>Sam's Guide</Text>
         <Text style={styles.headerText}>To The</Text>
@@ -140,6 +147,19 @@ const omera = {
 
         
       </ScrollView>
+
+      <View style={styles.footerNav}>
+
+        <TouchableOpacity>
+          <Text style={styles.navGood}>Good</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity>
+          <Text style={styles.navEvil}>Evil</Text>
+        </TouchableOpacity>
+
+
+      </View>
 
     </SafeAreaView>
   )
@@ -252,4 +272,25 @@ const styles = StyleSheet.create({
     fontWeight:'bold',
     color:'green',
   },
+
+  footerNav:{
+    flexDirection:"row",
+   
+  },
+
+  navGood:{
+    fontSize:30,
+    color:'green',
+    padding:21,
+    fontWeight:"bold"
+
+  },
+
+  navEvil:{
+    fontSize:30,
+    color:'red',
+    padding:21,
+    fontWeight:"bold"
+  },
+
 })
