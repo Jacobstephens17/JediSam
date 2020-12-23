@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, SafeAreaView, Image, ImageBackground, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, SafeAreaView, Image, ImageBackground, TouchableOpacity, NavigationContainer } from 'react-native';
 import ReactNativeParallaxHeader from 'react-native-parallax-header';
-
+import 'react-native-gesture-handler';
+// import { NavigationContainer } from 'react-navigation/native';
 
 
 export default function App() {
@@ -13,73 +14,86 @@ export default function App() {
     height: 500
   };
 
-const luke = {
+  const luke = {
     uri: 'https://wallpapercave.com/wp/wp3984534.jpg',
     width: 300,
     height: 500
-};
+  };
 
-const vader = {
-  uri: 'https://s3.crackedcdn.com/phpimages/article/9/8/8/637988_v3.jpg',
-  width: 300,
-  height: 500
-};
+  const vader = {
+     uri: 'https://s3.crackedcdn.com/phpimages/article/9/8/8/637988_v3.jpg',
+    width: 300,
+    height: 500
+  };
 
-const grogu = {
-  uri: 'https://static1.colliderimages.com/wordpress/wp-content/uploads/2020/11/the-mandalorian-season-2-chapter-13-grogu-social-featured.png',
-  width: 300,
-  height: 500
-};
+  const grogu = {
+    uri: 'https://static1.colliderimages.com/wordpress/wp-content/uploads/2020/11/the-mandalorian-season-2-chapter-13-grogu-social-featured.png',
+    width: 300,
+    height: 500
+  };
 
-const greef = {
-  uri: 'https://i.insider.com/5dcc481d79d757101c735212?width=1300&format=jpeg&auto=webp',
-  width: 300,
-  height: 500
-};
+  const greef = {
+    uri: 'https://i.insider.com/5dcc481d79d757101c735212?width=1300&format=jpeg&auto=webp',
+    width: 300,
+    height: 500
+  };
 
-const client = {
-  uri: 'https://i.insider.com/5dcc426679d7570ecb2bd742?width=1300&format=jpeg&auto=webp',
-  width: 300,
-  height: 500
-};
+  const client = {
+    uri: 'https://i.insider.com/5dcc426679d7570ecb2bd742?width=1300&format=jpeg&auto=webp',
+    width: 300,
+    height: 500
+  };
 
-const pershing = {
-  uri: 'https://i.insider.com/5dcc52eb79d75741f06b0564?width=1300&format=jpeg&auto=webp',
-  width: 300,
-  height: 500
-};
+  const pershing = {
+    uri: 'https://i.insider.com/5dcc52eb79d75741f06b0564?width=1300&format=jpeg&auto=webp',
+    width: 300,
+    height: 500
+  };
 
-const kuill = {
-  uri: 'https://i.insider.com/5dcc483479d7570f924fe104?width=1300&format=jpeg&auto=webp',
-  width: 300,
-  height: 500
-};
-const ig11 = {
-  uri: 'https://i.insider.com/5dcc486879d7573e7d58a64c?width=1300&format=jpeg&auto=webp',
-  width: 300,
-  height: 500
-};
+  const kuill = {
+    uri: 'https://i.insider.com/5dcc483479d7570f924fe104?width=1300&format=jpeg&auto=webp',
+    width: 300,
+    height: 500
+  };
 
-const dune = {
-  uri: 'https://i.insider.com/5dcc484779d7570f924fe107?width=1300&format=jpeg&auto=webp',
-  width: 300,
-  height: 500
-};
+  const ig11 = {
+    uri: 'https://i.insider.com/5dcc486879d7573e7d58a64c?width=1300&format=jpeg&auto=webp',
+    width: 300,
+    height: 500
+  };
 
-const omera = {
-  uri: 'https://i.insider.com/5f9c78436f5b310011724980?width=1300&format=jpeg&auto=webp',
-  width: 300,
-  height: 500
-};
+  const dune = {
+    uri: 'https://i.insider.com/5dcc484779d7570f924fe107?width=1300&format=jpeg&auto=webp',
+    width: 300,
+    height: 500,
+  };
 
-const backgroundImage = { 
-uri: 'http://getwallpapers.com/wallpaper/full/6/d/f/10101.jpg',
-width:600, 
-height:800
-}
+  const omera = {
+    uri: 'https://i.insider.com/5f9c78436f5b310011724980?width=1300&format=jpeg&auto=webp',
+    width: 300,
+    height: 500
+  };
+
+  const image = { 
+    uri: 'http://getwallpapers.com/wallpaper/full/6/d/f/10101.jpg',
+    width:1200, 
+    height:1500,
+  };
+
+
+
+
+
+
+
+
 
  return(
+
+  
     <SafeAreaView style={styles.cardLayout}>
+
+      
       <View style={styles.header}>
         <Text style={styles.headerSam}>Sam's Guide</Text>
         <Text style={styles.headerText}>To The</Text>
@@ -144,153 +158,153 @@ height:800
         </View>
 
 
-
-        
+      
+   
       </ScrollView>
 
-      <View style={styles.footerNav}>
-
-        <TouchableOpacity>
-          <Text style={styles.navGood}>Good</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity>
-          <Text style={styles.navEvil}>Evil</Text>
-        </TouchableOpacity>
-
-
-      </View>
 
     </SafeAreaView>
+    
   )
 }
 
-const styles = StyleSheet.create({
 
-  header:{
-    paddingBottom:10,
-    paddingTop:10,
-    
-  },
 
-  headerText:{
-    fontSize:15,
-    fontWeight:'bold',
-    textAlign:'center',
-    color:'red',
-  },
 
-  headerSam:{
-    fontSize:35,
-    fontWeight:'bold',
-    textAlign:'center',
-    color:'blue',
-  },
 
-  headerStar:{
-    fontSize:22,
-    fontWeight:'bold',
-    textAlign:'center',
-    color:'green',
-  },
 
-  heading:{
-    flex:1,
-  },
 
-  card:{
-   margin:25,
-   flex:1,
-  },
 
-  cardLayout:{
-   flex:1,
-   backgroundColor:'black',
-   alignItems:'center'
-  },
 
-  cardTextDin:{
-    fontSize:25,
-    fontWeight:'bold',
-    color:'silver',
-  },
 
-  cardTextLuke:{
-    fontSize:25,
-    fontWeight:'bold',
-    color:'green',
-  },
 
-  cardTextVader:{
-    fontSize:25,
-    fontWeight:'bold',
-    color:'red',
-  },
 
-  cardTextGrogu:{
-    fontSize:25,
-    fontWeight:'bold',
-    color:'green',
-  },
 
-  cardTextGreef:{
-    fontSize:25,
-    fontWeight:'bold',
-    color:'green',
-  },
+const styles = StyleSheet.create( {
 
-  cardTextClient:{
-    fontSize:25,
-    fontWeight:'bold',
-    color:'green',
-  },
+    header:{
+      paddingBottom:10,
+      paddingTop:10,
+    },
 
-  cardTextPershing:{
-    fontSize:25,
-    fontWeight:'bold',
-    color:'green',
-  },
-
-  cardTextKuill:{
-    fontSize:25,
-    fontWeight:'bold',
-    color:'green',
-  },
-
-  cardTextig11:{
-    fontSize:25,
-    fontWeight:'bold',
-    color:'green',
-  },
-  cardTextDune:{
-    fontSize:25,
-    fontWeight:'bold',
-    color:'green',
-  },
-  cardTextOmera:{
-    fontSize:25,
-    fontWeight:'bold',
-    color:'green',
-  },
-
-  footerNav:{
-    flexDirection:"row",
+    backgroundImage:{
    
-  },
+    },
 
-  navGood:{
-    fontSize:30,
-    color:'green',
-    padding:21,
-    fontWeight:"bold"
+    headerText:{
+      fontSize:15,
+      fontWeight:'bold',
+      textAlign:'center',
+      color:'red',
+    },
 
-  },
+    headerSam:{
+      fontSize:35,
+      fontWeight:'bold',
+      textAlign:'center',
+      color:'#0000FF',
+    },
 
-  navEvil:{
-    fontSize:30,
-    color:'red',
-    padding:21,
-    fontWeight:"bold"
-  },
+    headerStar:{
+      fontSize:22,
+      fontWeight:'bold',
+      textAlign:'center',
+      color:'green',
+    },
 
-})
+    heading:{
+      flex:1,
+    },
+
+    card:{
+      margin:10,
+      flex:1,
+      borderWidth:10,
+      borderColor:'blue',
+      padding:15,
+    },
+
+    cardLayout:{
+      flex:1,
+      alignItems:'center',
+      backgroundColor:'#000000'
+    },
+
+    cardTextGrogu:{
+      fontSize:25,
+      fontWeight:'bold',
+      color:'green',
+      paddingBottom:14,
+    },
+  
+    cardTextDin:{
+      fontSize:25,
+      fontWeight:'bold',
+      color:'silver',
+      paddingBottom:14,
+    },
+
+    cardTextLuke:{
+      fontSize:25,
+      fontWeight:'bold',
+      color:'green',
+      paddingBottom:14,
+    },
+
+    cardTextVader:{
+      fontSize:25,
+      fontWeight:'bold',
+      color:'red',
+      paddingBottom:14,
+    },
+
+    cardTextGreef:{
+      fontSize:25,
+      fontWeight:'bold',
+      color:'yellow',
+      paddingBottom:14,
+    },
+
+    cardTextClient:{
+      fontSize:25,
+      fontWeight:'bold',
+      color:'silver',
+      paddingBottom:14,
+    },
+
+    cardTextPershing:{
+      fontSize:25,
+      fontWeight:'bold',
+      color:'purple',
+      paddingBottom:14,
+    },
+
+    cardTextKuill:{
+      fontSize:25,
+      fontWeight:'bold',
+      color:'brown',
+      paddingBottom:14,
+    },
+
+    cardTextig11:{
+      fontSize:25,
+      fontWeight:'bold',
+      color:'darkgrey',
+      paddingBottom:14,
+    },
+
+    cardTextDune:{
+      fontSize:25,
+      fontWeight:'bold',
+      color:'orange',
+      paddingBottom:14,
+    },
+
+    cardTextOmera:{
+      fontSize:25,
+      fontWeight:'bold',
+      color:'pink',
+      paddingBottom:14,
+    },
+  }
+)
